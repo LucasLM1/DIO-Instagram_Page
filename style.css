@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none; /*sem decoração nas ancoras*/
+    font-family: sans-serif; /*definindo fonte para todas as palavras*/
+    font-size: 14px;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(236, 232, 232, 0.226);
+    margin: 0;
+    padding: 0;
+    display: flex; /*alinham tudo e sempre ocupam só o espaço disponivel na linha*/
+    justify-content: center;
+}
+
+.instagram-wrapper{
+    display: flex;
+    align-items: center; /*alinhamento no eixo Y*/
+    justify-content: start; /*alinhamento no eixo X*/
+    width: 60%;
+    height: 100vh;
+}
+
+.instaPhone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.instaPhone img{
+    height:50rem; /*estilização da imagem do celular*/
+}
+
+.myInsta{
+    position: absolute;
+    height: 446px;
+    width: 250px;
+    margin-left: 5.5%;
+    margin-top: 1.9%;
+}
+
+.instaContinue{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; /*faz a mudança de eixo*/
+    width: 55%;
+    min-height: 34rem;
+    margin-left: 40px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray
+}
+
+.group:nth-child(1){ /*seletor, no caso seleciona apenas o primeiro group*/
+    min-height: 19rem;
+}
+
+.instaLogo{
+    height: 3rem;
+}
+
+.imgProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden; /*isso serve para a imagem não exceder o volume da div*/
+}
+
+.imgProfile img{
+    height: 8.5rem;
+}
+
+.instaLogin{
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instaLogout{
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.notAccount{
+    color: rgb(160, 160, 160);
+}
+
+.linkBlue{
+    color: #0095f6;
+}
+
+.getTheApp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0; /* espaço apenas em cima e embaixo*/
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+.appDownload {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+    margin-left: 5px;
+}
+
+.appDownload:nth-child(1) {
+    background-image: url('./img/apple-buttonv2.png');
+}
+
+.appDownload:nth-child(2) {
+    background-image: url('./img/googlePlay-button.png');
+}
+
+/*Deixando CSS responsivo*/
+
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagramPhone {
+        display: none;
+    }
+
+    .instagramContinue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
